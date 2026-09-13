@@ -413,7 +413,7 @@ function Home() {
                     <span className="summary-icon"><MapPin size={17} /></span>
                     <div>
                       <p className="summary-label">Lokasi</p>
-                      <p className="summary-value">Kampus MAN 2 Kudus</p>
+                      <p className="summary-value">MAN 2 Kudus</p>
                     </div>
                   </div>
                 </div>
