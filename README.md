@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Schoolblog
 
-## Getting Started
+A [Vite](https://vite.dev) + React + TypeScript single-page app with [Tailwind CSS v4](https://tailwindcss.com) and [shadcn/ui](https://ui.shadcn.com) components.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — start the dev server
+- `npm run build` — typecheck (`tsc --noEmit`) then production build to `dist/`
+- `npm run preview` — preview the production build
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/pages/` — route pages (Home, NotFound). Routing is handled by [wouter](https://github.com/molefrog/wouter).
+- `src/components/ui/` — shadcn/ui components
+- `src/lib/utils.ts` — `cn()` class merge helper
+- `src/hooks/`, `src/contexts/` — app hooks and the light/dark theme context
+- `shared/const.ts` — shared constants resolved via the `@shared/*` path alias
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy `.env.example` to `.env` and fill in values:
 
-## Deploy on Vercel
+- `VITE_ANALYTICS_ENDPOINT` / `VITE_ANALYTICS_WEBSITE_ID` — optional Umami analytics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Hero and gallery images load from `/images/...` in the `public/` directory (see `src/pages/Home.tsx`).
