@@ -282,7 +282,7 @@ function Home() {
                 Laporan Khusus · September 2026
               </div>
               <p className="mb-5 flex items-center gap-2 text-sm font-semibold text-[#64806e]">
-                <MapPin size={16} /> Kampus MAN 2 Kudus, Jawa Tengah
+                <MapPin size={16} />MAN 2 Kudus, Jawa Tengah
               </p>
               <h1 className="font-display text-[clamp(2.8rem,5.6vw,5.55rem)] font-bold leading-[0.98] tracking-[-0.065em] text-[#173d2b]">
                 Pembangunan Gedung <span className="text-[#5e956b]">Boarding Baru</span> MAN 2 Kudus Masih Berlangsung
